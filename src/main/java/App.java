@@ -57,7 +57,7 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
         //post: process update team form
-        post("/teams/:id/update",(request, response) -> {
+        post("/teams/:id/update", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             String newName = request.queryParams("teamName");
             int idOfTeamToEdit = Integer.parseInt(request.params(":id"));
